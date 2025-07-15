@@ -60,7 +60,7 @@ function header_html($etape)
 
     TemplateRenderer::getInstance()->display('layout/parts/head.html.twig', [
         'lang'  => $_SESSION['glpilanguage'],
-        'title' => __('GLPI setup'),
+        'title' => __('MiDesk setup'),
         'css_files' => [
             ['path' => 'lib/tabler.css'],
             ['path' => 'lib/base.css'],
@@ -82,7 +82,7 @@ function header_html($etape)
     echo "<div id='principal'>";
     echo "<div id='bloc'>";
     echo "<div id='logo_bloc'></div>";
-    echo "<h2>GLPI SETUP</h2>";
+    echo "<h2>MiDesk SETUP</h2>";
     echo "<br><h3>" . htmlescape($etape) . "</h3>";
 }
 
