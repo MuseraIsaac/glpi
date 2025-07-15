@@ -45,7 +45,7 @@ use function Safe\scandir;
  */
 class ThemeManager
 {
-    public const DEFAULT_THEME = 'auror';
+    public const DEFAULT_THEME = 'lightblue';
     public const CORE_THEME_ROOT = GLPI_ROOT . '/css/palettes/';
 
     private array $core_themes = [];
