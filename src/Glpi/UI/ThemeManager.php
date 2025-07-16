@@ -69,7 +69,7 @@ class ThemeManager
         if ($this->core_themes === []) {
             $this->core_themes = [
                 new Theme('aerialgreen', 'Aerial Green', false, false),
-                new Theme('auror', 'Auror', false, false),
+                //new Theme('auror', 'Auror', false, false),
                 new Theme('auror_dark', 'Dark Auror', true, false),
                 new Theme('automn', 'Autumn', false, false),
                 new Theme('classic', 'Classic', false, false),
