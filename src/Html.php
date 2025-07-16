@@ -1251,8 +1251,25 @@ TWIG,
         $can_read_dashboard      = Session::haveRight('dashboard', READ);
         $default_asset_dashboard = defined('TU_USER') ? "" : Glpi\Dashboard\Grid::getDefaultDashboardForMenu('assets');
         $default_asset_helpdesk  = defined('TU_USER') ? "" : Glpi\Dashboard\Grid::getDefaultDashboardForMenu('helpdesk');
-
+    
+        // --- 1. Assistance/Helpdesk FIRST
         $menu = [
+            'helpdesk' => [
+                'title' => __('Support'),
+                'types' => [
+                    'Ticket', ServiceCatalog::class, 'Problem', 'Change',
+                    'Planning', 'Stat', 'TicketRecurrent', 'RecurrentChange',
+                ],
+                'icon'    => 'ti ti-headset',
+            ],
+        ];
+    
+        if ($can_read_dashboard && strlen($default_asset_helpdesk) > 0) {
+            $menu['helpdesk']['default_dashboard'] = '/front/dashboard_helpdesk.php';
+        }
+    
+        // --- 2. Assets SECOND
+        $menu += [
             'assets' => [
                 'title' => _n('Asset', 'Assets', Session::getPluralNumber()),
                 'types' => array_merge(
@@ -1268,26 +1285,12 @@ TWIG,
                 'icon'    => 'ti ti-package',
             ],
         ];
-
+    
         if ($can_read_dashboard && strlen($default_asset_dashboard) > 0) {
             $menu['assets']['default_dashboard'] = '/front/dashboard_assets.php';
         }
-
-        $menu += [
-            'helpdesk' => [
-                'title' => __('Assistance'),
-                'types' => [
-                    'Ticket', ServiceCatalog::class, 'Problem', 'Change',
-                    'Planning', 'Stat', 'TicketRecurrent', 'RecurrentChange',
-                ],
-                'icon'    => 'ti ti-headset',
-            ],
-        ];
-
-        if ($can_read_dashboard && strlen($default_asset_helpdesk) > 0) {
-            $menu['helpdesk']['default_dashboard'] = '/front/dashboard_helpdesk.php';
-        }
-
+    
+        // --- The rest as-is
         $menu += [
             'management' => [
                 'title' => __('Management'),
@@ -1331,7 +1334,7 @@ TWIG,
                 ],
                 'icon'  => 'ti ti-settings',
             ],
-
+    
             // special items
             'preference' => [
                 'title'   => __('My settings'),
@@ -1340,7 +1343,7 @@ TWIG,
                 'display' => false,
             ],
         ];
-
+    
         return $menu;
     }
 
