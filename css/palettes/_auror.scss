@@ -32,22 +32,10 @@
  */
 
 // This palette is literally just the default light palette. See "../includes/palette_light.scss".
+
 :root[data-glpi-theme="auror"] {
-    --tblr-primary-rgb: 200, 234, 253;
-    --tblr-secondary: #656d77;
-    --tblr-link-color-rgb: 44, 115, 167;
-    --tblr-badge-bg: #d0d9f0;
-    --tblr-badge-color: rgb(58, 73, 102);
-    --glpi-mainmenu-bg: #1a7ab2; // hsl(202deg, 75%, 40%)
-    --glpi-helpdesk-header: hsl(203deg, 70%, 85%);
-    --glpi-mainmenu-fg: #f4f6fa;
     --glpi-palette-color-1: #1a7ab2;
     --glpi-palette-color-2: #41b1ff;
     --glpi-palette-color-3: #7cc7f1;
     --glpi-palette-color-4: #fff;
-
-    // Helpdesk header
-    --glpi-illustrations-gradient-1: hsl(202deg, 75%, 92%);
-    --glpi-illustrations-gradient-2: hsl(202deg, 75%, 72%);
-    --glpi-illustrations-gradient-3: hsl(202deg, 75%, 40%);
 }
