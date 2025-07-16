@@ -9364,9 +9364,9 @@ style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"&gt;
         $tables['glpi_users'] = [
             [
                 'id' => self::USER_GLPI,
-                'name' => 'glpi',
+                'name' => 'admin',
                 'realname' => null,
-                'password' => password_hash('glpi', PASSWORD_DEFAULT),
+                'password' => password_hash('admin', PASSWORD_DEFAULT),
                 'language' => null,
                 'list_limit' => '20',
                 'authtype' => '1',
@@ -9400,7 +9400,7 @@ style="color: #8b8c8f; font-weight: bold; text-decoration: underline;"&gt;
                 'profiles_id' => 0,
             ], [
                 'id' => self::USER_SYSTEM,
-                'name' => 'glpi-system',
+                'name' => 'Support-user',
                 'realname' => 'Support',
                 'password' => '',
                 'language' => null,
