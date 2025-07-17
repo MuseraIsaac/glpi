@@ -290,7 +290,7 @@ class Telemetry extends CommonGLPI
     {
         switch ($name) {
             case 'telemetry':
-                return ['description' => __('Send telemetry information')];
+                return ['description' => __('')]; //Send telemetry information
         }
         return [];
     }
@@ -320,7 +320,7 @@ class Telemetry extends CommonGLPI
             //all is OK!
             return 1;
         } else {
-            $message = 'Something went wrong sending telemetry information';
+            $message = ''; //Something went wrong sending telemetry information
             if ($errstr != '') {
                 $message .= ": $errstr";
             }
@@ -457,7 +457,7 @@ class Telemetry extends CommonGLPI
      */
     public static function showTelemetry()
     {
-        $out = "<div class='form-check'>
+       /*  $out = "<div class='form-check'>
          <input type='checkbox' class='form-check-input' checked='checked' value='1' name='send_stats' id='send_stats'/>
          <label for='send_stats' class='form-check-label'>
             " . __('Send "usage statistics"') . "
@@ -469,7 +469,7 @@ class Telemetry extends CommonGLPI
         $out .= __("Let us know your usage to improve future versions of GLPI and its plugins!") . "<br>";
 
         $out .= '<span class="mt-2">' . self::getViewLink() . '</span>';
-        return $out;
+        return $out;   */
     }
 
     /**
@@ -479,19 +479,19 @@ class Telemetry extends CommonGLPI
      */
     public static function showReference()
     {
-        $out = "<h3>" . __('Reference your GLPI') . "</h3>";
-        $out .= sprintf(
-            __("Besides, if you appreciate GLPI and its community, " .
-            "please take a minute to reference your organization by filling %1\$s"),
-            sprintf(
-                "<a href='" . GLPI_TELEMETRY_URI . "/reference?showmodal&uuid=" .
-                self::getRegistrationUuid() . "' class='btn btn-sm btn-info' target='_blank'>
-               <i class='ti ti-writing-sign me-1'></i>
-               %1\$s
-            </a>",
-                __('the registration form')
-            )
-        );
-        return $out;
+       // $out = "<h3>" . __('Reference your GLPI') . "</h3>";
+        //$out .= sprintf(
+          //  __("Besides, if you appreciate GLPI and its community, " .
+            //"please take a minute to reference your organization by filling %1\$s"),
+            //sprintf(
+              //  "<a href='" . GLPI_TELEMETRY_URI . "/reference?showmodal&uuid=" .
+               // self::getRegistrationUuid() . "' class='btn btn-sm btn-info' target='_blank'>
+               //<i class='ti ti-writing-sign me-1'></i>
+               //%1\$s
+            //</a>",
+              //  __('the registration form')
+            //)
+        //);
+        //return $out;
     }
 }
