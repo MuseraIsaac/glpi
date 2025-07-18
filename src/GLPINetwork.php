@@ -235,13 +235,13 @@ class GLPINetwork extends CommonGLPI
     {
         return nl2br(
             sprintf(
-                __s(
-                    "You need help to integrate GLPI in your IT, have a bug fixed or benefit from pre-configured rules or dictionaries?\n\n"
-                    . "We provide the %s space for you.\n"
-                    . "GLPI-Network is a commercial service that includes a subscription for tier 3 support, ensuring the correction of bugs encountered with a commitment time.\n\n"
-                    . "In this same space, you will be able to contact an official partner to help you with your GLPI integration."
+                __s(""
+                   // "You need help to integrate GLPI in your IT, have a bug fixed or benefit from pre-configured rules or dictionaries?\n\n"
+                   // . "We provide the %s space for you.\n"
+                   // . "GLPI-Network is a commercial service that includes a subscription for tier 3 support, ensuring the correction of bugs encountered with a commitment time.\n\n"
+                   // . "In this same space, you will be able to contact an official partner to help you with your GLPI integration."
                 ),
-                "<a href='" . GLPI_NETWORK_SERVICES . "' target='_blank'>" . GLPI_NETWORK_SERVICES . "</a>"
+               // "<a href='" . GLPI_NETWORK_SERVICES . "' target='_blank'>" . GLPI_NETWORK_SERVICES . "</a>"
             )
         );
     }
@@ -249,9 +249,9 @@ class GLPINetwork extends CommonGLPI
     public static function getSupportPromoteMessage(): string
     {
         return nl2br(sprintf(
-            __s("Having troubles setting up an advanced GLPI module?\n" .
-            "We can help you solve them. Sign up for support on %s."),
-            "<a href='" . GLPI_NETWORK_SERVICES . "' target='_blank'>" . GLPI_NETWORK_SERVICES . "</a>"
+            __s("\n" . //Having troubles setting up an advanced GLPI module?
+            ""), //We can help you solve them. Sign up for support on %s
+           // "<a href='" . GLPI_NETWORK_SERVICES . "' target='_blank'>" . GLPI_NETWORK_SERVICES . "</a>"
         ));
     }
 
