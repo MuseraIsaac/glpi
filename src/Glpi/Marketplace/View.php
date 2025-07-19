@@ -1045,7 +1045,7 @@ HTML;
                 'style' => 'width: 600px',
             ]);
             echo "<br><br>";
-            echo __("GLPI provides a new marketplace to download and install plugins.");
+            echo __("MiDesk provides a new marketplace to download and install plugins.");
             echo "<br><br>";
             echo "<b>" . __("Do you want to replace the plugins setup page by the new marketplace?") . "</b>";
             echo "</div>";
