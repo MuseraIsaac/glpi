@@ -965,7 +965,7 @@ class Config extends CommonDBTM
                     1 => self::createTabEntry(__('General setup')),  // Display
                     2 => self::createTabEntry(__('Default values')), // Prefs
                     3 => self::createTabEntry(_n('Asset', 'Assets', Session::getPluralNumber()), 0, $item::getType(), 'ti ti-package'),
-                    4 => self::createTabEntry(__('Assistance'), 0, $item::getType(), 'ti ti-headset'),
+                    4 => self::createTabEntry(__('Support'), 0, $item::getType(), 'ti ti-headset'),
                     12 => self::createTabEntry(__('Management'), 0, $item::getType(), 'ti ti-wallet'),
                 ];
                 if (Config::canUpdate()) {
