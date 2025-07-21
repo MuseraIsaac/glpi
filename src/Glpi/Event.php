@@ -199,7 +199,7 @@ class Event extends CommonDBTM
         $logService = [
             'inventory'    => _n('Asset', 'Assets', Session::getPluralNumber()),
             'tracking'      => _n('Ticket', 'Tickets', Session::getPluralNumber()),
-            'maintain'      => __('Assistance'),
+            'maintain'      => __('Support'),
             'planning'      => __('Planning'),
             'tools'         => __('Tools'),
             'financial'     => __('Management'),
