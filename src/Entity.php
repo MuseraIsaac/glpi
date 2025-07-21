@@ -644,7 +644,7 @@ class Entity extends CommonTreeDropdown implements LinkableToTilesInterface
                             [self::READHELPDESK, self::UPDATEHELPDESK]
                         )
                     ) {
-                        $ong[5] = self::createTabEntry(__('Assistance'), 0, $item::class, 'ti ti-headset');
+                        $ong[5] = self::createTabEntry(__('Support'), 0, $item::class, 'ti ti-headset');
                     }
                     $ong[6] = self::createTabEntry(_n('Asset', 'Assets', Session::getPluralNumber()), 0, $item::class, 'ti ti-package');
                     if (Session::haveRight(Config::$rightname, UPDATE)) {
@@ -1319,7 +1319,7 @@ class Entity extends CommonTreeDropdown implements LinkableToTilesInterface
 
         $tab[] = [
             'id'                 => 'helpdesk',
-            'name'               => __('Assistance'),
+            'name'               => __('Support'),
         ];
 
         $tab[] = [
