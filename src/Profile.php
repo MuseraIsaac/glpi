@@ -161,7 +161,7 @@ class Profile extends CommonDBTM implements LinkableToTilesInterface
             switch ($item::class) {
                 case self::class:
                     if ($item->fields['interface'] === 'helpdesk') {
-                        $ong[3] = self::createTabEntry(__('Assistance'), 0, $item::class, 'ti ti-headset'); // Helpdesk
+                        $ong[3] = self::createTabEntry(__('Support'), 0, $item::class, 'ti ti-headset'); // Helpdesk
                         $ong[4] = self::createTabEntry(__('Helpdesk home'), 0, $item::class, 'ti ti-home');
                         $ong[5] = self::createTabEntry(__('Life cycles'));
                         $ong[6] = self::createTabEntry(__('Tools'), 0, $item::class, 'ti ti-briefcase');
@@ -169,7 +169,7 @@ class Profile extends CommonDBTM implements LinkableToTilesInterface
                         $ong[8] = self::createTabEntry(__('Security'), 0, $item::class, 'ti ti-shield-lock');
                     } else {
                         $ong[2] = self::createTabEntry(_n('Asset', 'Assets', Session::getPluralNumber()), 0, $item::class, 'ti ti-package');
-                        $ong[3] = self::createTabEntry(__('Assistance'), 0, $item::class, 'ti ti-headset');
+                        $ong[3] = self::createTabEntry(__('Support'), 0, $item::class, 'ti ti-headset');
                         $ong[4] = self::createTabEntry(__('Life cycles'));
                         $ong[5] = self::createTabEntry(__('Management'), 0, $item::class, 'ti ti-wallet');
                         $ong[6] = self::createTabEntry(__('Tools'), 0, $item::class, 'ti ti-briefcase');
@@ -2664,7 +2664,7 @@ class Profile extends CommonDBTM implements LinkableToTilesInterface
 
         $tab[] = [
             'id'                 => 'ticket',
-            'name'               => __('Assistance'),
+            'name'               => __('Support'),
         ];
 
         $tab[] = [
