@@ -64,7 +64,7 @@ class State extends CommonTreeDropdown
         $fields   = parent::getAdditionalFields();
 
         $fields[] = [
-            'label' => __('Show items with this status in assistance'),
+            'label' => __('Show items with this status in Support'),
             'name'  => 'is_helpdesk_visible',
             'type'  => 'bool',
         ];
@@ -730,7 +730,7 @@ class State extends CommonTreeDropdown
             'id'                 => '40',
             'table'              => static::getTable(),
             'field'              => 'is_helpdesk_visible',
-            'name'               => __('Show items with this status in assistance'),
+            'name'               => __('Show items with this status in Support'),
             'datatype'           => 'bool',
         ];
 
