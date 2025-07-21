@@ -268,7 +268,7 @@ final class SearchOption implements \ArrayAccess
             Session::getLoginUserID()
             && in_array($itemtype, $CFG_GLPI["ticket_types"])
         ) {
-            $search[$itemtype]['tracking']          = __('Assistance');
+            $search[$itemtype]['tracking']          = __('Support');
 
             $fn_append_options(Problem::getSearchOptionsToAdd($itemtype));
             $fn_append_options(Ticket::getSearchOptionsToAdd($itemtype));
