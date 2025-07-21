@@ -124,7 +124,7 @@ class QuestionTypeItem extends AbstractQuestionType implements FormQuestionDataC
                     PDU::class,
                 ]
             ),
-            __('Assistance') => array_merge(
+            __('Support') => array_merge(
                 $CFG_GLPI['itil_types'],
                 [
                     TicketRecurrent::class,
