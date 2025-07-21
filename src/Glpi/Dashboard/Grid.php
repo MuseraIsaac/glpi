@@ -1294,7 +1294,7 @@ HTML;
                 $cards["bn_count_tickets_$case"] = [
                     'widgettype' => ["bigNumber"],
                     'itemtype'   => "\\Ticket",
-                    'group'      => __('Assistance'),
+                    'group'      => __('Support'),
                     'label'      => sprintf(__("Number of %s"), $label),
                     'provider'   => "Glpi\\Dashboard\\Provider::nbTicketsGeneric",
                     'args'       => [
@@ -1310,7 +1310,7 @@ HTML;
                 $cards["table_count_tickets_$case"] = [
                     'widgettype' => ["searchShowList"],
                     'itemtype'   => "\\Ticket",
-                    'group'      => __('Assistance'),
+                    'group'      => __('Support'),
                     'label'      => sprintf(__("List of %s"), $label),
                     'provider'   => "Glpi\\Dashboard\\Provider::nbTicketsGeneric",
                     'args'       => [
@@ -1327,7 +1327,7 @@ HTML;
             $cards["nb_opened_ticket"] = [
                 'widgettype' => ['line', 'area', 'bar'],
                 'itemtype'   => "\\Ticket",
-                'group'      => __('Assistance'),
+                'group'      => __('Support'),
                 'label'      => __("Number of tickets by month"),
                 'provider'   => "Glpi\\Dashboard\\Provider::ticketsOpened",
                 'filters'    => Filter::getAppliableFilters(Ticket::getTable()),
@@ -1336,7 +1336,7 @@ HTML;
             $cards["ticket_evolution"] = [
                 'widgettype' => ['lines', 'areas', 'bars', 'stackedbars'],
                 'itemtype'   => "\\Ticket",
-                'group'      => __('Assistance'),
+                'group'      => __('Support'),
                 'label'      => __("Evolution of ticket in the past year"),
                 'provider'   => "Glpi\\Dashboard\\Provider::getTicketsEvolution",
                 'filters'    => Filter::getAppliableFilters(Ticket::getTable()),
@@ -1345,7 +1345,7 @@ HTML;
             $cards["ticket_status"] = [
                 'widgettype' => ['lines', 'areas', 'bars', 'stackedbars'],
                 'itemtype'   => "\\Ticket",
-                'group'      => __('Assistance'),
+                'group'      => __('Support'),
                 'label'      => __("Tickets status by month"),
                 'provider'   => "Glpi\\Dashboard\\Provider::getTicketsStatus",
                 'filters'    => Filter::getAppliableFilters(Ticket::getTable()),
@@ -1354,7 +1354,7 @@ HTML;
             $cards["ticket_times"] = [
                 'widgettype' => ['lines', 'areas', 'bars', 'stackedbars'],
                 'itemtype'   => "\\Ticket",
-                'group'      => __('Assistance'),
+                'group'      => __('Support'),
                 'label'      => __("Tickets times (in hours)"),
                 'provider'   => "Glpi\\Dashboard\\Provider::averageTicketTimes",
                 'filters'    => Filter::getAppliableFilters(Ticket::getTable()),
@@ -1363,7 +1363,7 @@ HTML;
             $cards["tickets_summary"] = [
                 'widgettype' => ['summaryNumbers', 'multipleNumber', 'bar', 'hbar'],
                 'itemtype'   => "\\Ticket",
-                'group'      => __('Assistance'),
+                'group'      => __('Support'),
                 'label'      => __("Tickets summary"),
                 'provider'   => "Glpi\\Dashboard\\Provider::getTicketSummary",
                 'filters'    => Filter::getAppliableFilters(Ticket::getTable()),
@@ -1373,7 +1373,7 @@ HTML;
             $cards["bn_count_tickets_expired_by_tech"] = [
                 'widgettype' => ['hBars', 'stackedHBars'],
                 'itemtype'   => "\\Ticket",
-                'group'      => __('Assistance'),
+                'group'      => __('Support'),
                 'label'      => __("Number of tickets by SLA status and technician"),
                 'provider'   => "Glpi\\Dashboard\\Provider::nbTicketsByAgreementStatusAndTechnician",
                 'filters'    => Filter::getAppliableFilters(Ticket::getTable()),
@@ -1382,7 +1382,7 @@ HTML;
             $cards["bn_count_tickets_expired_by_tech_group"] = [
                 'widgettype' => ['hBars', 'stackedHBars'],
                 'itemtype'   => "\\Ticket",
-                'group'      => __('Assistance'),
+                'group'      => __('Support'),
                 'label'      => __("Number of tickets by SLA status and technician group"),
                 'provider'   => "Glpi\\Dashboard\\Provider::nbTicketsByAgreementStatusAndTechnicianGroup",
                 'filters'    => Filter::getAppliableFilters(Ticket::getTable()),
@@ -1399,7 +1399,7 @@ HTML;
                 $cards["top_ticket_$itemtype"] = [
                     'widgettype' => ['summaryNumbers', 'pie', 'donut', 'halfpie', 'halfdonut', 'multipleNumber', 'bar', 'hbar'],
                     'itemtype'   => "\\Ticket",
-                    'group'      => __('Assistance'),
+                    'group'      => __('Support'),
                     'label'      => $label,
                     'provider'   => "Glpi\\Dashboard\\Provider::multipleNumberTicketBy$itemtype",
                     'filters'    => Filter::getAppliableFilters($itemtype::getTable()),
@@ -1419,7 +1419,7 @@ HTML;
                 $cards["top_ticket_$type"] = [
                     'widgettype' => ['pie', 'donut', 'halfpie', 'halfdonut', 'summaryNumbers', 'multipleNumber', 'bar', 'hbar'],
                     'itemtype'   => "\\Ticket",
-                    'group'      => __('Assistance'),
+                    'group'      => __('Support'),
                     'label'      => $label,
                     'provider'   => "Glpi\\Dashboard\\Provider::nbTicketsActor",
                     'args'       => [
